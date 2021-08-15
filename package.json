@@ -1,0 +1,19 @@
+{
+  "name": "add-evt-listener",
+  "version": "0.0.1",
+  "description": "convenient addEvtListener utility",
+  "main": "index.js",
+  "repository": "https://github.com/tranvansang/add-evt-listener",
+  "author": "Tran Sang <tr@nsang.me>",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "build": "rm -rf index.d.ts index.js && tsc --declaration --outDir . index.ts"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
+}
