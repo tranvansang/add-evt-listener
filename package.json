@@ -11,9 +11,10 @@
     "index.d.ts"
   ],
   "scripts": {
-    "build": "rm -rf index.d.ts index.js && tsc --declaration --outDir . index.ts"
+    "build": "rm -rf index.d.ts index.js index.js.map && tsc --declaration --sourceMap --outDir . index.ts"
   },
   "devDependencies": {
-    "typescript": "^4.3.5"
-  }
+    "typescript": "^5.0.3"
+  },
+  "packageManager": "yarn@3.5.0"
 }
