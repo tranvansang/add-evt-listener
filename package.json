@@ -1,6 +1,6 @@
 {
   "name": "add-evt-listener",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "convenient addEvtListener utility",
   "main": "index.js",
   "repository": "https://github.com/tranvansang/add-evt-listener",
@@ -8,7 +8,8 @@
   "license": "MIT",
   "files": [
     "index.js",
-    "index.d.ts"
+    "index.d.ts",
+    "index.js.map"
   ],
   "scripts": {
     "build": "rm -rf index.d.ts index.js index.js.map && tsc --declaration --sourceMap --outDir . index.ts"
