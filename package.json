@@ -1,6 +1,6 @@
 {
   "name": "add-evt-listener",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "convenient addEvtListener utility",
   "main": "index.cjs",
   "repository": "https://github.com/tranvansang/add-evt-listener",
@@ -12,6 +12,12 @@
     "index.mjs",
     "index.d.mts"
   ],
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    }
+  },
   "scripts": {
     "prepublish": "./compile.sh"
   },
