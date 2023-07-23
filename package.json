@@ -1,21 +1,22 @@
 {
   "name": "add-evt-listener",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "convenient addEvtListener utility",
-  "main": "index.js",
+  "main": "index.cjs",
   "repository": "https://github.com/tranvansang/add-evt-listener",
   "author": "Tran Sang <t@sang.jp>",
   "license": "MIT",
   "files": [
-    "index.js",
-    "index.d.ts",
-    "index.js.map"
+    "index.cjs",
+    "index.d.cts",
+    "index.mjs",
+    "index.d.mts"
   ],
   "scripts": {
-    "build": "rm -rf index.d.ts index.js index.js.map && tsc --declaration --sourceMap --outDir . index.ts"
+    "prepublish": "./compile.sh"
   },
   "devDependencies": {
-    "typescript": "^5.0.3"
+    "typescript": "^5.1.6"
   },
-  "packageManager": "yarn@3.5.0"
+  "packageManager": "yarn@3.6.1"
 }
