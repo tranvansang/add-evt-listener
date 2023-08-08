@@ -1,7 +1,7 @@
 {
   "name": "add-evt-listener",
-  "version": "0.0.5",
-  "description": "convenient addEvtListener utility",
+  "version": "0.1.0",
+  "description": "convenient addEventListener utility",
   "main": "index.cjs",
   "repository": "https://github.com/tranvansang/add-evt-listener",
   "author": "Sang Tran <t@sang.jp>",
@@ -17,9 +17,6 @@
       "import": "./index.mjs",
       "require": "./index.cjs"
     }
-  },
-  "scripts": {
-    "prepublish": "./compile.sh"
   },
   "devDependencies": {
     "typescript": "^5.1.6"
