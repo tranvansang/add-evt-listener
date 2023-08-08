@@ -1,6 +1,6 @@
 {
   "name": "add-evt-listener",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "convenient addEventListener utility",
   "main": "index.cjs",
   "repository": "https://github.com/tranvansang/add-evt-listener",
