@@ -1,6 +1,6 @@
 # add-evt-listener
 
-- Install: `yarn add add-evt-listener`.
+- Install: `npm i add-evt-listener`.
 - Usage
 
 ```javascript
