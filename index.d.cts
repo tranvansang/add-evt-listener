@@ -1,11 +1,11 @@
-type IEventHandler<T extends {
-    addEventListener<T extends string>(event: T, listener: any, option: any): any;
-}, V> = T['addEventListener'] extends (event: V, handler: infer Handler) => any ? Handler extends (...params: any[]) => any ? Handler : never : never;
-type IEventOption<T extends {
-    addEventListener<T extends string>(event: T, listener: any, option: any): any;
-}, V, P> = T['addEventListener'] extends (event: V, handler: P, option: infer Option) => any ? Option : never;
+type IEventHandler<Target extends {
+    addEventListener(event: string, handler: any, option?: any): any;
+}, EventName> = Target['addEventListener'] extends (event: EventName, handler: infer Handler, ...args: any[]) => any ? Handler extends (...params: any[]) => any ? Handler : never : never;
+type IEventOption<Target extends {
+    addEventListener(event: string, handler: any, option?: any): any;
+}, EventName, Handler> = Target['addEventListener'] extends (event: EventName, handler: Handler, option: infer Option) => any ? Option : never;
 export default function addEvtListener<Target extends {
-    addEventListener<T extends string>(event: T, listener: any, option: any): any;
-    removeEventListener<T extends string>(event: T, listener: any, option: any): any;
-}, Event extends Parameters<Target['addEventListener']>[0], Handler extends IEventHandler<Target, Event>>(target: Target, event: Event, handler: Handler, option?: IEventOption<Target, Event, Handler>): () => any;
+    addEventListener(event: string, handler: any, option?: any): any;
+    removeEventListener(event: string, handler: any, option?: any): any;
+}, EventName extends Parameters<Target['addEventListener']>[0], Handler extends IEventHandler<Target, EventName>>(target: Target, event: EventName, handler: Handler, option?: IEventOption<Target, EventName, Handler>): () => any;
 export {};
