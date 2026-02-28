@@ -7,5 +7,9 @@ type IEventOption<Target extends {
 export default function addEvtListener<Target extends {
     addEventListener(event: string, handler: any, option?: any): any;
     removeEventListener(event: string, handler: any, option?: any): any;
-}, EventName extends Parameters<Target['addEventListener']>[0], Handler extends IEventHandler<Target, EventName>>(target: Target, event: EventName, handler: Handler, option?: IEventOption<Target, EventName, Handler>): () => any;
+}, EventName extends Parameters<Target['addEventListener']>[0], Handler extends IEventHandler<Target, EventName>>(target: Target, event: EventName, handler: Handler, option?: IEventOption<Target, EventName, Handler>): () => void;
+export default function addEvtListener<Target extends {
+    addEventListener(event: string, handler: any, option?: any): any;
+    removeEventListener(event: string, handler: any, option?: any): any;
+}, EventName extends Parameters<Target['addEventListener']>[0]>(target: Target, event: EventName, handler: (...args: any[]) => any, option?: IEventOption<Target, EventName, IEventHandler<Target, EventName>>): () => void;
 export {};
